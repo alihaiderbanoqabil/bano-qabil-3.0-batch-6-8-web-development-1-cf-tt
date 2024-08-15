@@ -1,0 +1,8 @@
+/* .bg-body-tertiary{
+    background-color: red !important;
+} */
+
+.nav-link {
+    color: red !important;
+    border: 1px solid green;
+}
