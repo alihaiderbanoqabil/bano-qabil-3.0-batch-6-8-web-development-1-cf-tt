@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 16 last class of CSS</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        height: 100vh;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 3fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto 50rem auto;
+        grid-template-rows: 1fr 2fr 3fr;
+        background-color: #2196f3;
+        padding: 10px;
+        /* gap: 5rem 10rem;
+        gap: 1rem; */
+        justify-content: space-evenly;
+      }
+      .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+      }
+      header {
+        background-color: #2196f3;
+        grid-area: 1 / span 4;
+      }
+
+      aside {
+        background-color: #f34821;
+        /* grid-area: 1 / span 2; */
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+      main {
+        background-color: #aaf321;
+        /* grid-area: 2 / span 4; */
+        grid-column-start: 2;
+        grid-column-end: 5;
+      }
+      footer {
+        background-color: #cd21f3;
+        grid-column-start: 1;
+        grid-column-end: 5;
+      }
+
+      body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 2.5rem 1fr 2.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Header</header>
+    <aside>Sidebar</aside>
+    <main>Main</main>
+    <footer>Footer</footer>
+    <!-- <h1>Class 16 last class of CSS</h1>
+    <div class="grid-container">
+      <div
+        class="grid-item"
+        style="
+          grid-column-start: 1;
+          grid-column-end: 4;
+          grid-row-start: 1;
+          grid-row-end: 3;
+        "
+      >
+        1
+      </div>
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+      <div class="grid-item">7</div>
+      <div class="grid-item">8</div>
+      <div class="grid-item">9</div>
+    </div> -->
+
+  </body>
+</html>
