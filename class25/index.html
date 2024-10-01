@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 25 (Class 8 of JS)</title>
+  </head>
+  <body>
+    <h1>Class 25 (Class 8 of JS)</h1>
+    <script>
+      console.log("Class 25 (Class 8 of JS)");
+      //   const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      const numbers = [190090, 5555, 3555, 455];
+
+      //   const mapNumbers = numbers.map((element, index, array) => {
+      //     console.log(element, index, array);
+      //     // return element * 10
+      //     // return element ** 2;
+      //     return { element: element, powerOfElement: element ** 2 };
+      //   });
+      //   console.log(mapNumbers);
+
+      //   const upperCaseFruits = fruits.map(function (element, index, array) {
+      //     console.log(element, index, array);
+      //     // return element * 10
+      //     // return element ** 2;
+      //     return { element: element, powerOfElement: element.toUpperCase() };
+      //   });
+
+      //   console.log(upperCaseFruits);
+
+      const fruits = [
+        { name: "apples", quantity: 100, type: "fruit" },
+        { name: "bananas", quantity: 500, type: "fruit" },
+        { name: "oranges", quantity: 200, type: "fruit" },
+        { name: "kiwi", quantity: 150, type: "frui t" },
+        { name: "tomoto", quantity: 300, type: "vegetable" },
+        { name: "potato", quantity: 150, type: "vegetable" },
+      ];
+      const fruitsWithIds = fruits.map((fruit, index) => ({
+        ...fruit,
+        id: index + 1,
+        price: index + 1 + 1000,
+      }));
+      //   function callback(element, index, array) {
+      //     console.log(element, index, array);
+      //     // return element * 10
+      //     // return element ** 2;
+      //     return { element: element, upperCaseElement: element.toUpperCase() };
+      //   }
+
+      //   const callback = (element, index, array) => {
+      //     console.log(element, index, array);
+      //     // return element * 10
+      //     // return element ** 2;
+      //     const obj = {
+      //       ...element,
+      //       combined: `${element.name}-${element.quantity}`,
+      //     };
+      //     return obj;
+      //   };
+      //   const combinedFruits = fruits.map(callback);
+      //   console.log(combinedFruits);
+
+      //   const filteredFruits = fruits.filter((element) => {
+      //     console.log(element);
+      //     return element.type === "fruit" && element.quantity > 200;
+      //   });
+
+      //   const filteredFruits = fruits.filter((element) => {
+      //     console.log(element);
+
+      //     if (element.type === "fruit" && element.quantity > 200) {
+      //       return true;
+      //     }
+      //     return false;
+      //   });
+
+      //   const filteredFruits = fruitsWithIds.filter((element) => {
+      //     console.log(element, "filter");
+
+      //     return element.id === 2;
+      //   });
+      //   console.log(filteredFruits, "filteredFruits");
+      //   const findFruits = fruitsWithIds.find((element) => {
+      //     console.log(element, "find");
+
+      //     return element.id === 2;
+      //   });
+
+      //   console.log(findFruits, "findFruits");
+
+      //   let sum = 0;
+      //   for (let index = 0; index < numbers.length; index++) {
+      //     const element = numbers[index];
+      //     console.log(element);
+      //     sum = sum + element;
+      //   }
+      //   for (const element of numbers) {
+      //     sum = sum + element;
+      //   }
+      //   console.log(sum, numbers);
+
+      //   const sum = numbers.reduce(
+      //     (previousValue, currentValue, currentIndex, array) => {
+      //       console.log(previousValue, currentValue, currentIndex, array);
+      //       return previousValue + currentValue;
+      //     },
+      //     0
+      //   );
+      //   console.log(sum);
+      //   const sum = fruitsWithIds.reduce(
+      //     (previousValue, currentValue, currentIndex, array) => {
+      //     //   console.log(previousValue, currentValue, currentIndex, array);
+      //       return previousValue + currentValue.quantity * currentValue.price;
+      //       //   return previousValue + currentValue;
+      //     },
+      //     0
+      //   );
+      //   console.log(sum);
+
+      //   console.log(
+      //     fruits.some((element, index, array) => {
+      //       console.log(element, index, array);
+      //       return element.quantity > 200;
+      //     })
+      //   );
+      //   console.log(
+      //     fruits.every((element, index, array) => {
+      //       console.log(element, index, array);
+      //     //   return element.quantity > 200;
+      //       return element.quantity > 50;
+      //     })
+      //   );
+
+      //   const abc = fruits.forEach((el, i, arr) => {
+      //     console.log(el, i, arr);
+      //     el.quantity = el.quantity + 1;
+      //     el.id = i + 100;
+      //     return el;
+      //   });
+      //   console.log(abc);
+
+      //   console.log(numbers.includes(2));
+      //   console.log(numbers.includes(100));
+      //   console.log(numbers.indexOf(2));
+      //   console.log(numbers.indexOf(100));
+      //   console.log(Array.isArray(numbers));
+      //   console.log(Array.isArray(8998));
+      //   const keys = numbers.keys();
+      //   console.log(keys);
+      //   for (const element of keys) {
+      //     console.log(element, "element");
+      //   }
+      //   const values = numbers.values();
+      //   console.log(values);
+      //   for (const element of values) {
+      //     console.log(element, "element");
+      //   }
+      //   const entries = numbers.entries();
+      //   console.log(entries);
+      //   for (const element of entries) {
+      //     console.log(element, "element");
+      //   }
+
+      console.log(numbers.reverse());
+      console.log(numbers);
+    </script>
+  </body>
+</html>
