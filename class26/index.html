@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 26 (Class 9 of JS)</title>
+  </head>
+  <body>
+    <h1>Class 26 (Class 9 of JS)</h1>
+    <button onclick="resetInterval()">Clear Interval</button>
+    <button onclick="resetTimeout()">Clear Timeout</button>
+    <script type="module">
+      //   import { name as _name, age, user } from "./person.js";
+      // //   import message1 from "./person.js";
+      //   import message from "./person.js";
+      //   console.log(name, age, user, message('ali'));
+      //   console.log(_name, age, user, message('ali'));
+
+      console.log("Class 26 (Class 9 of JS)");
+      // Create an Array
+      //   const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      //   console.log(fruits.sort());
+      //   console.log(fruits);
+      //   const points = [40, 100, 1, 5, 25, 10];
+      //   console.log(points.sort());
+      //   console.log(
+      //     points.sort(function (a, b) {
+      //       return a - b;
+      //     })
+      //   );
+      //   console.log(
+      //     points.sort((a, b) => {
+      //       return b - a;
+      //     })
+      //   );
+
+      //   session storage vs local storage vs cookies
+      const user = {
+        id: 1,
+        name: "Leanne Graham",
+        username: "Bret",
+        email: "Sincere@april.biz",
+        address: {
+          street: "Kulas Light",
+          suite: "Apt. 556",
+          city: "Gwenborough",
+          zipcode: "92998-3874",
+          geo: {
+            lat: "-37.3159",
+            lng: "81.1496",
+          },
+        },
+        phone: "1-770-736-8031 x56442",
+        website: "hildegard.org",
+        company: {
+          name: "Romaguera-Crona",
+          catchPhrase: "Multi-layered client-server neural-net",
+          bs: "harness real-time e-markets",
+        },
+      };
+
+      const posts = [
+        {
+          userId: 1,
+          id: 1,
+          title:
+            "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+          body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+        },
+        {
+          userId: 1,
+          id: 2,
+          title: "qui est esse",
+          body: "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
+        },
+        {
+          userId: 1,
+          id: 3,
+          title: "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+          body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut",
+        },
+        {
+          userId: 1,
+          id: 4,
+          title: "eum et est occaecati",
+          body: "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",
+        },
+        {
+          userId: 1,
+          id: 5,
+          title: "nesciunt quas odio",
+          body: "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque",
+        },
+      ];
+      localStorage.setItem("name", "ali haider");
+      localStorage.setItem("age", 20);
+      localStorage.setItem("isMale", true);
+      localStorage.setItem("user", JSON.stringify(user));
+      localStorage.setItem("posts", JSON.stringify(posts));
+
+      //   console.log(localStorage.getItem("name"));
+      //   console.log(
+      //     typeof localStorage.getItem("age"),
+      //     localStorage.getItem("age")
+      //   );
+      //   console.log(localStorage.getItem('posts'));
+      //   console.log(JSON.parse(localStorage.getItem('posts')));
+      //   console.log(localStorage.getItem('post'));
+
+      // localStorage.removeItem('posts')
+      // localStorage.removeItem('age')
+
+      // localStorage.clear()
+
+      // console.log(localStorage.key(0));
+      // console.log(localStorage.key(1));
+      // console.log(localStorage.length);
+
+      document.cookie = "username=John Doe";
+      document.cookie = "username=John Smith";
+      document.cookie = "email=smith@gmail.com";
+      document.cookie =
+        "username=John Doe; expires=Thu, 18 Dec 3013 12:00:00 UTC";
+      document.cookie =
+        "gender=male; expires=Thu, 18 Dec 3013 12:00:00 UTC; path=/";
+      const cookies = document.cookie;
+      //   console.log(cookies);
+
+      //   function getCookieObject(cookies) {
+      //     const cookieObject = {};
+      //     const splitCookieByEqual = cookies.split("; ");
+      //     for (const cookieKeyValuePair of splitCookieByEqual) {
+      //       const cookieKeyValuePairArray = cookieKeyValuePair.split("=");
+      //       cookieObject[cookieKeyValuePairArray[0]] = cookieKeyValuePairArray[1];
+      //     }
+      //     return cookieObject;
+      //   }
+      //   function getCookieByKeyName(key, cookies) {
+      //     // const cookieObject = {};
+      //     // const splitCookieByEqual = cookies.split("; ");
+      //     // for (const cookieKeyValuePair of splitCookieByEqual) {
+      //     //   const cookieKeyValuePairArray = cookieKeyValuePair.split("=");
+      //     //   cookieObject[cookieKeyValuePairArray[0]] = cookieKeyValuePairArray[1];
+      //     // }
+      //     const cookieObject = getCookieObject(cookies);
+      //     return cookieObject[key];
+      //   }
+      //   console.log(getCookieByKeyName("username", cookies));
+      //   console.log(getCookieByKeyName("gender", cookies));
+      //   console.log(getCookieObject(cookies));
+
+      //   console.log("Before interval");
+      //   let index = 0;
+      //   const interval = setInterval(() => {
+      //     console.log("setInterval calling", index);
+      //     index++;
+      //   }, 1000);
+
+      //   function resetInterval() {
+      //     clearInterval(interval);
+      //   }
+      //   console.log("After interval");
+      //   console.log("Before interval");
+      //   let index = 0;
+      //   const interval = setTimeout(() => {
+      //     console.log("setTimeout calling", index);
+      //     index++;
+      //   }, 5000);
+
+      //   function resetTimeout() {
+      //     clearTimeout(interval);
+      //   }
+      //   console.log("After interval");
+
+      //   console.log(user.address.geo.lat);
+      //   console.log(user.info && user.info.abc);
+      //   console.log(user.info && user.info.abc && user.info.abc.xyz);
+      //   console.log( user.info?.abc?.xyz);
+
+      //   let name = "ali";
+
+      //   // if (name === undefined) {
+      //   if (!name) {
+      //     name = "default";
+      //   }
+      //   console.log(name);
+
+      //   const foo = null ?? "default string";
+      //   console.log(foo);
+
+      //   const baz = 0 ?? 42;
+      //   console.log(baz);
+
+      //   const foo = 'aku' || "default string";
+      //   console.log(foo);
+
+      //   const baz = 0 || 42;
+      //   console.log(baz);
+
+      //   let copiedUser = user;
+      //   copiedUser.name = "hasnain";
+      //   console.log(copiedUser);
+      //   console.log(user);
+
+      //   let shallowCopyUser = { user };
+      //   let shallowCopyUser = { user: user };
+      //   let shallowCopyUser = { ...user };
+      //   //   shallowCopyUser.name = "hasnain";
+      //   console.log(shallowCopyUser);
+      //   console.log(user);
+
+      //   const shallowCopyPost = [...posts];
+      //   console.log(shallowCopyPost);
+
+      //   const {
+      //     id,
+      //     name,
+      //     username,
+      //     email,
+      //     address: {
+      //       street,
+      //       suite,
+      //       city,
+      //       zipcode,
+      //       geo: { lat, lng },
+      //       geo,
+      //     },
+      //     address,
+      //     phone,
+      //     website,
+      //     company: { name: companyName, catchPhrase, bs },
+      //   } = user;
+
+      //   console.log(lat);
+      //   console.log(lng);
+      //   console.log(zipcode);
+      //   console.log(companyName);
+      //   console.log(address);
+      //   console.log(geo);
+
+      const names = ["ali", "haider", "hasnain"];
+      const marks = [50, 60, 100];
+
+      //   const haiderMarks = marks[1]
+      //   console.log(haiderMarks);
+      //   console.log(marks[2]);
+
+      //   const [aliMarks, haiderMarks, hasnainMarks] = marks;
+      //   console.log(aliMarks);
+      //   console.log(hasnainMarks);
+
+      // rest operator in JS
+
+      const { id, name, ...remainingUserKeys } = user;
+      console.log(remainingUserKeys, id, name);
+
+      const [aliMarks,  ...remainingStudentMarks] = marks;
+      console.log(remainingStudentMarks);
+    </script>
+  </body>
+</html>
