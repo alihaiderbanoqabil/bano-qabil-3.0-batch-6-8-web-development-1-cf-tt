@@ -217,10 +217,10 @@
         <label for="customRange1" class="form-label">Example range</label>
         <input type="range" class="form-range" id="customRange1" />
         <div class="d-grid gap-2">
-          <button class="btn btn-primary" type="button" onclick="onSubmit()">
+          <!-- <button class="btn btn-primary" type="button" onclick="onSubmit()">
             Submit
-          </button>
-          <!-- <button class="btn btn-primary" type="submit">Submit</button> -->
+          </button> -->
+          <button class="btn btn-primary" type="submit">Submit</button>
           <button class="btn btn-danger" type="button">Reset</button>
         </div>
       </form>
@@ -231,38 +231,51 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      function onSubmit() {
-        const email = document.getElementById("email");
-        const exampleFormControlTextarea1 = document.getElementById(
-          "exampleFormControlTextarea1"
-        );
-        const _date = new Date(date.value);
-        // // console.log(_date.toDateString(), date.value);
-        console.log(
-          document.querySelector('input[name="gender"]:checked')?.value
-        );
-        const checkboxes = document.querySelectorAll(".course:checked");
+      // function onSubmit() {
+      //   const email = document.getElementById("email");
+      //   const exampleFormControlTextarea1 = document.getElementById(
+      //     "exampleFormControlTextarea1"
+      //   );
+      //   const _date = new Date(date.value);
+      //   // // console.log(_date.toDateString(), date.value);
+      //   console.log(
+      //     document.querySelector('input[name="gender"]:checked')?.value
+      //   );
+      //   const checkboxes = document.querySelectorAll(".course:checked");
 
-        console.log(
-          checkboxes,
-          "checkboxes",
-          Array.from(checkboxes).map((checkbox) => checkbox.value)
-        );
+      //   console.log(
+      //     checkboxes,
+      //     "checkboxes",
+      //     Array.from(checkboxes).map((checkbox) => checkbox.value)
+      //   );
 
-        // const data = {
-        //   email: email.value,
-        //   textarea: exampleFormControlTextarea1.value,
-        //   select: selectbox.value,
-        //   date: date.value,
-        //   formatedDate: _date.getDate(),
-        //   formatedDate: _date.getFullYear(),
-        //   formatedDate: _date.toISOString(),
-        // };
+      //   const data = {
+      //     email: email.value,
+      //     textarea: exampleFormControlTextarea1.value,
+      //     select: selectbox.value,
+      //     date: date.value,
+      //     formatedDate: _date.getDate(),
+      //     formatedDate: _date.getFullYear(),
+      //     formatedDate: _date.toISOString(),
+      //   };
 
-        // document.querySelector("body").innerHTML = JSON.stringify(data);
+      //   // document.querySelector("body").innerHTML = JSON.stringify(data);
 
-        console.log(data, "data");
-      }
+      //   console.log(data, "data");
+      // }
+
+      document.querySelector("form").addEventListener(
+        "submit",
+        function (event) {
+          event.preventDefault();
+          console.log(event.target);
+          console.log(event.target[0].value);
+          console.log(event.target[1].value);
+          console.log(event.target[2].value);
+          console.log(event.target[3].value);
+        },
+        { once: true }
+      );
     </script>
     <!-- <script>
       const changeStyle = (button) => {
